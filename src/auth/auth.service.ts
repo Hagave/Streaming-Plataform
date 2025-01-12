@@ -13,10 +13,11 @@ export class AuthService {
   async validateUser(email: string, password: string) {
     const user = await this.usersService.findOneByEmail(email);
     if (user && bcrypt.compareSync(password, user.password)) {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { password, ...result } = user;
       return result;
     }
-    return null; // Senha inválida ou usuário não encontrado
+    return null;
   }
 
   async login(user: any) {

@@ -9,11 +9,7 @@ export class CreateVideoDto {
   @IsString()
   description: string;
 
-  @IsNotEmpty()
-  @IsString()
-  url: string;
-
-  @IsNotEmpty()
-  @IsString()
-  userId: number;
+  // @IsNotEmpty()
+  // @IsString()
+  // userId: number;
 }

@@ -17,6 +17,7 @@ CREATE TABLE "Video" (
     "description" TEXT NOT NULL,
     "url" TEXT NOT NULL,
     "userId" INTEGER NOT NULL,
+    "videoData" TEXT NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,
     "updatedAt" TIMESTAMP(3) NOT NULL,
 

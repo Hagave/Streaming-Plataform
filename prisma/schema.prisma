@@ -21,9 +21,10 @@ model Video {
   id          Int      @id @default(autoincrement())
   title       String
   description String
-  url         String
+  videoData   String   // Campo para armazenar a URL do vídeo no S3
   userId      Int
   user        User     @relation("UserVideos", fields: [userId], references: [id])
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
 }
+
